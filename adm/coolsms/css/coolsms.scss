@@ -1,0 +1,529 @@
+@import 'scss/colorset';
+@import 'scss/base';
+
+#coolsms-wrap {
+  .form-group {
+	margin-bottom:$innerPadding;
+	position:relative;
+
+	&.form-inline {
+	  overflow:hidden;
+
+	  label {
+		float:left;
+		width:30%;
+		line-height:28px;
+		text-align:center;
+	  }
+
+	  .form-float {
+		width:70%;
+
+		select {
+		  width:100%;
+		}
+
+		input {
+		  width:100%;
+		}
+	  }
+	}
+
+	.form-float {
+	  -webkit-appearance:none;
+	  position:relative;
+	  display:inline-block;
+	  width:100%;
+
+	  select {
+		&:focus {
+		  outline:none;
+
+		  &+i.form-helper {
+			width:100%;
+			left:0;
+		  }
+		}
+
+		&+i.form-helper {
+		  width:0;
+		  position:absolute;
+		  bottom:0;
+		  left:50%;
+		  border-bottom:2px solid $activeColor;
+		  transition:all 350ms;
+		  transition-timing-function:ease;
+		}
+	  }
+
+	  input {
+		&:focus {
+		  outline:none;
+
+		  &+i.form-helper {
+			width:100%;
+			left:0;
+		  }
+		}
+
+		&+i.form-helper {
+		  width:0;
+		  position:absolute;
+		  bottom:0;
+		  left:50%;
+		  border-bottom:2px solid $activeColor;
+		  transition:all 350ms;
+		  transition-timing-function:ease;
+		}
+	  }
+
+	  textarea {
+		&:focus+i.form-helper {
+		  width:100%;
+		  left:0;
+		}
+
+		&+i.form-helper {
+		  width:0;
+		  position:absolute;
+		  bottom:0;
+		  left:50%;
+		  border-bottom:2px solid $activeColor;
+		  transition:all 350ms;
+		  transition-timing-function:ease;
+		}
+	  }
+	}
+
+	label {
+	  color:$textBlack;
+	  font-size:12px;
+	  font-weight:bold;
+	}
+
+	select {
+	  -webkit-appearance:none;
+	  -moz-appearance:none;
+	  border-top:none;
+	  border-right:none;
+	  border-bottom:1px solid $borderColor;
+	  border-left:none;
+	  border-radius:0;
+	  height:28px;
+	  line-height:28px;
+	  padding-right:5px;
+	  padding-left:5px;
+
+	  &::-ms-expand {
+		display: none;
+	  }
+	}
+
+	input[type="text"],
+	input[type="number"] {
+	  border-top:none;
+	  border-right:none;
+	  border-bottom:1px solid $borderColor;
+	  border-left:none;
+	  font-size:12px;
+	  height:28px;
+	  padding-right:$innerPadding / 2;
+	  padding-left:$innerPadding / 2;
+	}
+
+	textarea {
+	  margin:0;
+	  border-top:none;
+	  border-right:none;
+	  border-bottom:1px solid $borderColor;
+	  border-left:none;
+	  resize:none;
+	  padding:$innerPadding / 2;
+	  outline:none;
+	  display:block;
+	}
+  }
+
+  button.button {
+	-webkit-appearance:none;
+	color:#fff;
+	font-size:12px;
+	font-weight:bold;
+	line-height:28px;
+	border:none;
+	transition:all 350ms;
+	transition-timing-function:ease;
+
+	&.button-large {
+	  line-height:48px;
+	}
+
+	&.button-submit {
+	  background-color:lighten($activeColor, 7%);
+
+	  &:hover {
+		background-color:$activeColor;
+	  }
+	}
+
+	&.button-cancel {
+	  background-color:lighten($cancelColor, 7%);
+
+	  &:hover {
+		background-color:$cancelColor;
+	  }
+	}
+
+	&.button-search {
+	  background-color:$smsBoxTitleBG;
+	  padding-right:5px;
+	  padding-left:5px;
+	}
+  }
+
+  .form-w100 {
+	width:100%;
+  }
+
+  .text-true {
+	color:$trueColor;
+  }
+
+  .text-false {
+	color:$falseColor;
+  }
+
+  ul.status-bar {
+	border:1px solid $borderColor;
+	overflow:hidden;
+	margin-bottom:$marginBottom;
+
+	li {
+	  width:20%;
+	  float:left;
+	  text-align:center;
+	  font-size:12px;
+	  font-weight:bold;
+	  line-height:38px;
+	  color:$textBlack;
+	  padding-right:10px;
+	  padding-left:10px;
+
+	  &:not(:last-child) {
+		border-right:1px solid $borderColor;
+	  }
+
+	  &.title {
+		background-color:$headerBG;
+		border-right:none;
+		overflow:hidden;
+		text-overflow:ellipsis;
+		white-space:nowrap;
+	  }
+	}
+  }
+
+  ul.pagination {
+	clear:both;
+	margin-bottom:$marginBottom;
+	margin-left:1%;
+	padding-top:$marginBottom;
+	text-align:center;
+	font-size:0;
+
+	li {
+	  display:inline-block;
+	  border-top:1px solid $paginationBorderColor;
+	  border-right:1px solid $paginationBorderColor;
+	  border-bottom:1px solid $paginationBorderColor;
+
+	  &.active {
+		a {
+		  background-color:$paginationActiveColor;
+		  color:#fff;
+		}
+	  }
+
+	  a {
+		font-size:10px;
+		line-height:30px;
+		width:30px;
+		display:inline-block;
+		color: $paginationColor;
+
+		&:hover {
+		  background-color:lighten($paginationActiveColor, 7%);
+		  color:#fff;
+		}
+	  }
+
+	  &:first-child {
+		border-left:1px solid $paginationBorderColor;
+	  }
+	}
+  }
+
+  .status-box {
+	overflow:hidden;
+	margin-bottom:$marginBottom;
+	margin-left:-1%;
+
+	dl {
+	  width:24%;
+	  float:left;
+	  border:1px solid $borderColor;
+	  margin-top:0;
+	  margin-bottom:0;
+	  margin-left:1%;
+
+	  dt {
+		background-color:$statusBoxTitleBG;
+		font-size:12px;
+		font-weight:bold;
+		line-height:39px;
+		color:#fff;
+		text-align:center;
+
+		a {
+		  color:#fff;
+		}
+	  }
+
+	  dd {
+		width:50%;
+		float:left;
+		text-align:center;
+		padding:$innerPadding;
+		position:relative;
+
+		&:not(:last-child):after {
+		  content:' ';
+		  border-right:1px solid $borderColor;
+		  position:absolute;
+		  top:$innerPadding;
+		  right:0;
+		  bottom:$innerPadding;
+		}
+
+		p {
+		  margin-top:15px;
+		  color:$textBlack;
+		  font-size:14px;
+		  font-weight:bold;
+		}
+
+		small {
+		  display:inline-block;
+		  margin-bottom:15px;
+		  color:#8f8f8f;
+		  font-size:10px;
+		  font-weight:bold;
+		}
+	  }
+	}
+  }
+
+  .sms-box-wrap {
+	overflow:hidden;
+	margin-left:-1%;
+
+	.sms-box {
+	  float:left;
+	  margin-left:1%;
+
+	  &.sms-send {
+		width:24%;
+	  }
+
+	  &.sms-list {
+		width:74%;
+
+		a {
+		  color:#fff;
+		  float:right;
+		}
+	  }
+	}
+  }
+
+  .sms-box {
+	border:1px solid $borderColor;
+	margin-bottom:$marginBottom;
+
+	dl {
+	  margin:0;
+
+	  dt {
+		background-color:$smsBoxTitleBG;
+		color:#fff;
+		text-align:center;
+		font-size:12px;
+		font-weight:bold;
+		line-height:39px;
+		padding-right:20px;
+		padding-left:20px;
+	  }
+
+	  dd {
+		padding:$innerPadding;
+	  }
+	}
+
+	&.sms-send {
+	  dl {
+		dd {
+		  .form-group:not(.form-inline) {
+			overflow:hidden;
+
+			&.form-w50 {
+			  width:50%;
+			  float:left;
+
+			  .form-float {
+				margin-left:100px;
+				display:block;
+				width:auto;
+			  }
+			}
+
+			&:not(.form-w50) {
+			  clear:both;
+			}
+
+			&>label {
+			  width:100px;
+			  line-height:28px;
+			  display:inline-block;
+			  float:left;
+			  overflow:hidden;
+			  clear:left;
+			  text-align:center;
+			}
+
+			ul {
+			  overflow:hidden;
+
+			  li {
+				float:left;
+				margin-left:$innerPadding;
+
+				label {
+				  color:$grayColor;
+				  font-weight:normal;
+				  line-height:28px;
+				}
+			  }
+			}
+
+			small.sms-byte {
+			  margin-top:1px;
+			  display:block;
+			  text-align:right;
+			}
+		  }
+		}
+	  }
+	}
+
+	&.sms-list {
+	  background-color:$smsBoxContentBG;
+
+	  dl {
+		dd {
+		  padding-bottom:0;
+
+		  table.sms-data {
+			border:1px solid $borderColor;
+			margin-bottom:$innerPadding;
+			background-color:#fff;
+
+			tbody {
+			  tr {
+				th {
+				  border:1px solid $borderColor;
+				  font-size:14px;
+				  line-height:30px;
+				  color:$textBlack;
+				}
+
+				td {
+				  border:1px solid $borderColor;
+				  text-align:center;
+				  font-size:12px;
+				  color:$grayColor;
+
+				  &[colspan="2"] {
+					padding:25px;
+				  }
+				}
+
+				&:last-child {
+				  td {
+				  	padding:0;
+				  }
+				}
+			  }
+			}
+		  }
+
+		  .no-data {
+			text-align:center;
+			color:$textBlack;
+			font-size:12px;
+			line-height:160px;
+			margin-left:1%;
+		  }
+
+		  &.colspan-2 {
+			overflow:hidden;
+			margin-left:-1%;
+
+			.sms-data-wrap {
+			  margin-left:1%;
+			  width:49%;
+			  float:left;
+
+			  &:nth-child(2n + 1) {
+				clear:both;
+			  }
+			}
+		  }
+
+		  &.colspan-3 {
+			overflow:hidden;
+			margin-left:-1%;
+
+			.sms-data-wrap {
+			  margin-left:1%;
+			  width:32.33333%;
+			  float:left;
+
+			  &:nth-child(3n + 1) {
+				clear:both;
+			  }
+			}
+		  }
+		}
+	  }
+	}
+  }
+
+  .sms-search {
+	background-color:$headerBG;
+	margin-bottom:$marginBottom;
+	padding:15px 20px 5px;
+	overflow:hidden;
+
+	.form-group {
+	  display:inline-block;
+
+	  label {
+		margin-right:20px;
+	  }
+
+	  .form-float {
+		width:auto;
+	  }
+	}
+  }
+}

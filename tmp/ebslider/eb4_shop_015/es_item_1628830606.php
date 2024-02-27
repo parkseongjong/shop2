@@ -1,0 +1,7 @@
+<?php
+if (!defined('_EYOOM_')) exit;
+$es_item = array(
+	"0" => array("ei_no" => "190","es_code" => "1628830606","ei_theme" => "eb4_shop_015","ei_state" => "1","ei_sort" => "1","ei_title" => "헤더 슬라이더 1","ei_subtitle" => "","ei_text" => "","ei_link" => "a:1:{i:0;s:36:\"http://theme4.eyoom.net/shop/list-60\";}","ei_target" => "a:1:{i:0;s:0:\"\";}","ei_img" => "a:1:{i:0;s:37:\"530e83bd3925eb3b1826dc64f7292b2c.jpeg\";}","ei_period" => "1","ei_start" => "","ei_end" => "","ei_clicked" => "0","ei_view_level" => "1","ei_regdt" => "2021-08-13 13:57:20"),
+	"1" => array("ei_no" => "191","es_code" => "1628830606","ei_theme" => "eb4_shop_015","ei_state" => "1","ei_sort" => "2","ei_title" => "헤더 슬라이더 2","ei_subtitle" => "","ei_text" => "","ei_link" => "a:1:{i:0;s:36:\"http://theme4.eyoom.net/shop/list-50\";}","ei_target" => "a:1:{i:0;s:0:\"\";}","ei_img" => "a:1:{i:0;s:37:\"871527624e31568de04e615eb1342808.jpeg\";}","ei_period" => "1","ei_start" => "","ei_end" => "","ei_clicked" => "0","ei_view_level" => "1","ei_regdt" => "2021-08-13 13:57:41"),
+	"2" => array("ei_no" => "192","es_code" => "1628830606","ei_theme" => "eb4_shop_015","ei_state" => "1","ei_sort" => "3","ei_title" => "헤더 슬라이더 3","ei_subtitle" => "","ei_text" => "","ei_link" => "a:1:{i:0;s:36:\"http://theme4.eyoom.net/shop/list-40\";}","ei_target" => "a:1:{i:0;s:0:\"\";}","ei_img" => "a:1:{i:0;s:37:\"ef9ecfcac57ff0e3d357a25760f5ac7f.jpeg\";}","ei_period" => "1","ei_start" => "","ei_end" => "","ei_clicked" => "0","ei_view_level" => "1","ei_regdt" => "2021-08-13 13:58:03"),
+);

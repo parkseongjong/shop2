@@ -1,0 +1,43 @@
+{
+    "name": "barry/api",
+    "description": "barry api",
+    "type": "porject",
+    "authors": [
+        {
+            "name": "Main ojt",
+            "email": "lol@ojt.pe.kr"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^2.1",
+        "psr/log": "^1.1",
+        "slim/slim": "4.6.0",
+        "ezyang/htmlpurifier": "^4.12",
+        "lcobucci/jwt": "^3.3",
+        "php-di/slim-bridge": "^3.0",
+        "slim/psr7": "^1.3",
+        "psr/http-server-middleware": "^1.0",
+        "psr/http-server-handler": "^1.0",
+        "webmozart/assert": "^1.9",
+        "wazaari/monolog-mysql": "^1.0",
+        "zircote/swagger-php": "^3.1",
+        "bryanjhv/slim-session": "~4.0",
+        "league/plates": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "barry\\admin\\": "controllers/admin",
+            "barry\\banner\\": "controllers/banner",
+            "barry\\client\\": "controllers/client",
+            "barry\\common\\": "controllers/common",
+            "barry\\order\\": "controllers/order",
+            "barry\\payment\\": "controllers/payment",
+            "barry\\coupon\\": "controllers/coupon",
+            "barry\\goods\\": "controllers/goods",
+            "barry\\memo\\": "controllers/memo",
+            "barry\\other\\": "controllers/other",
+            "barry\\db\\": "../plugin/barryDbDriver",
+            "barry\\encrypt\\": "../plugin/barryEncrypt"
+        }
+    }
+}

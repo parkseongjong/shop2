@@ -1,0 +1,5 @@
+extend/version.extend.php
+.idea/
+lib/Excel/itemexcel.xls
+lib/Excel/itemexcel_eyoom.xls
+.sync-exclude.lst

@@ -1,0 +1,88 @@
+HTML {min-height: 100vh}
+BODY {font-family: '맑은 고딕', 'malgun gothic', 'AppleGothicNeoSD', 'Apple SD 산돌고딕 Neo', 'Microsoft NeoGothic', 'Droid sans', 'sans-serif';min-height: 100vh;font-size: 10px;}
+HTML, BODY { margin: 0;padding: 0;box-sizing: border-box;}
+form {margin: 0;}
+.pay-container {min-height: 100vh}
+.pay-container > FORM {min-height: 100vh;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-ms-flex-direction: column;flex-direction: column;flex-flow: column nowrap;}
+.pay-container > FORM .p-foot {margin-top: auto;padding-bottom: 1.25rem;}
+.pay-container sub {bottom: 0;margin: 0 .5rem;font-size: 1.25rem;}
+.pay-container {margin: 0;padding: 0 2.5rem}
+.pay-container .text-ellipsis {max-width: 100%;white-space: nowrap;text-overflow: ellipsis;display: inline-block}
+.pay-container INPUT.form-control {border: 0; border-bottom: 0.1rem solid #888;font-weight: 700;height: auto;padding: .5rem 1.25rem;font-size: 2rem;color: #000;border-radius: 0;-webkit-box-shadow: none;box-shadow: none}
+.pay-container INPUT.form-control:focus {-webkit-box-shadow: none;box-shadow: none}
+.pay-container INPUT.form-control::placeholder,
+.pay-container INPUT.form-control::-webkit-input-placeholder {font-weight: 700; color: #a8a9cd}
+.pay-container SELECT.form-control {padding: .5rem 1.25rem;margin-top: .75rem;}
+.pay-container .control-label {font-size: 1.5rem;font-weight: 600;margin-bottom: 0;color: #7f7e7e}
+/**/
+.pay-container .checklist {margin: 0;padding: 0 0 0 36px;display: block; position: relative;vertical-align: top; min-height: 18px;cursor: pointer; font-size: 1.5rem;font-weight: normal}
+.pay-container .checklist INPUT[type="checkbox"] {position: absolute;opacity: 0;cursor: pointer;z-index: 1}
+.pay-container .checklist .checkmark {position: absolute; top: calc(50% - 9px); left: 0; width: 18px; height: 18px; cursor: pointer;background-color: #eee;border: 1px solid #ddd;border-radius: 3px !important;z-index: 2}
+.pay-container .checklist:hover .checkmark,
+.pay-container .checklist input:checked ~ .checkmark {border-color: rgba(0, 0, 0, .2); box-shadow: inset 1px 1px 1px 0 rgba(0, 0, 0, .175); }
+.pay-container .checklist .checkmark::after {content: '';position: absolute;left: 8px;top: -5px;width: 5px;height: 18px;border: solid transparent;border-width: 0 3px 3px 0;-webkit-transform: rotate(48deg);-ms-transform: rotate(48deg);transform: rotate(48deg);}
+.pay-container .checklist input:checked ~ .checkmark::after {border-color: #333;}
+.pay-container .checklist .checkmark {border-color: #a5a8ac;}
+.pay-container .checklist input:checked ~ .checkmark::after {border-color: #333;}
+.pay-container .checklist input.partial ~ .checkmark::after {left: 3px;top: 4px;width: 9px;height: 8px;border: 0;border-radius: 0 !important;background-color: #777;-webkit-transform: none;-ms-transform: none;transform: none;}
+/**/
+.pay-container .brand {text-align: center; font-size: 1.2rem;position: relative;}
+.pay-container .brand[data-env="development"]::after {position: absolute;content: 'TEST';background-color: rgba(255, 255, 255, .5); border: #f30 1px solid;font-size: 1.25rem;color: #f30;padding: .25rem;font-weight: 700; transform: rotate(-35deg);top: .3rem;margin-left: -1.5rem;}
+.pay-container .brand IMG {height: 28px;}
+.pay-container .payup-brand {margin: 1.325rem 0 0 0;padding: 0;display: flex;}
+.pay-container .payup-brand IMG {height: 24px;vertical-align: text-top;}
+.pay-container .payup-brand > aside {flex-grow: 1; text-align: right;}
+.pay-container .btn-dismiss {position: relative;width: 24px;height: 24px;font-size: 0;background-color: transparent;opacity: .5;border: 0;outline: 0;}
+.pay-container .btn-dismiss:before, .pay-container .btn-dismiss:after {position: absolute;top: 0;left: 24pxpx;content: ' ';height: 18px;width: 1px;background-color: #333;}
+.pay-container .btn-dismiss:before {transform: rotate(45deg);box-shadow: 1px 0 1px rgba(0, 0, 0, .35);}
+.pay-container .btn-dismiss:after {transform: rotate(-45deg);box-shadow: -1px 0 1px rgba(0, 0, 0, .35);}
+.pay-container .btn-dismiss:hover {opacity: 1}
+.pay-container .btn-active {font-size: 2rem;padding-top: .75rem; padding-bottom: .75rem;border: 1px solid #0c498f;background-color: transparent; color: #fff;height: auto;outline: 0;position: relative;overflow: hidden;z-index: 1;}
+.pay-container .btn-active::before {content: '';position: absolute;top: 0;left: 0;width: 0;height: 100%;background-color: #fff;transition: all .15s;z-index: -1;}
+.pay-container .btn-active::after {content: '';position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: #0c498f;z-index: -2;}
+.pay-container .btn-active:hover {color: #0c498f;}
+.pay-container .btn-active:hover::before { width: 100%;}
+.pay-container .btn-active.btn-s {font-size: 1.25rem;padding: .375rem .75rem;border-color: #ccc;border-radius: 3px;color: #333;}
+.pay-container .btn-active.btn-s::before {background-color: #5e5e5e;width: 100%;height: 0}
+.pay-container .btn-active.btn-s::after {background-color: #fff}
+.pay-container .btn-active.btn-s:hover {color: #fff;}
+.pay-container .btn-active.btn-s:hover::before { height: 100%;}
+.pay-container .subtitle {font-size: 1.25rem;}
+.pay-container .subtitle strong {color: #0c498f }
+.pay-container section.p-section {padding: .5rem}
+.pay-container .p-section h3 {font-size: 1.875rem;font-weight: 700;margin: .75rem 0;}
+.pay-container .p-section article:not(:last-child) {margin-bottom: 1rem;}
+.pay-container .form-write DL {margin: 0 -1rem;padding: 0;display: flex;}
+.pay-container .form-write DD {margin: 0 1rem;padding: 0;width: 50%;}
+.pay-container .form-write DL {margin-bottom: 1.375rem;}
+.pay-container .d-split {display: inline-block;width: 50%;margin: 0;padding: 0}
+.pay-container .control-help-text .help-block {font-size: 1.375rem;vertical-align: text-bottom;margin: 0;}
+.pay-container .control-help-text .help-block:first-child {margin-top: .75rem}
+.pay-container .control-help-button {text-align: left}
+.pay-container .control-help-button .help-block {font-size: 1.375rem;vertical-align: text-bottom;margin: 0;margin-top: 1.375rem}
+/**/
+.pay-container .summary {font-size: 1.75rem;color: #fff;background-color: #0c498f;margin-left: -2.5rem;margin-right: -2.5rem;padding: 1rem 2.5rem;}
+.pay-container .summary > DL {margin: 0;padding: 0;display: flex;}
+.pay-container .summary > DL > DT {margin: 0;padding: 1rem 0 0 0;}
+.pay-container .summary > DL > DD {margin: 0;padding: 0;}
+.pay-container .summary > DL > DD {text-align: right;flex-grow: 1}
+.pay-container .summary > DL:not(:last-child) {margin-bottom: .75rem;}
+.pay-container .summary .pay-amount {font-size: 1.75em;}
+.pay-container .terms article {display: flex;}
+.pay-container .p-section.terms article:not(:last-child) {margin-bottom: .25rem;}
+.pay-container .terms article > label {flex-grow: 1;padding-top: 2px;}
+.pay-container .terms article > .buttons {display: inline-block;}
+.pay-container .terms article .select input[type="checkbox"] {opacity: .3}
+.pay-container .btn, .pay-container .btn:hover, .pay-container .btn:active {outline: 0;}
+.pay-container .btn.btn-s {padding: .35rem .5rem;font-size: 1.25rem;display: inline-block;height: auto;border-radius: 3px;}
+.pay-container .btn.btn-default:hover {background-color: #0c498f; color: #fff}
+/**/
+.pay-container .credit-card {display: none}
+.pay-container .intro {display: block}
+.pay-container FORM.payout .intro {display: none;}
+.pay-container FORM.payout .credit-card {display: block;}
+.pay-container .help-block {min-height: 20px;color: #0c498f;margin-bottom: 0}
+/**/
+.pay-container .pay-loading {display: none;position: fixed;left: 0;top: 0;width: 100vw; height: 100vh;background-color: rgba(255, 255, 255, .8); z-index: 100}
+.pay-container .pay-load-content {display: flex;height: 100vh;}
+.pay-container .pay-load-content img {max-width: 60%;max-height: 60%;margin: auto;}
